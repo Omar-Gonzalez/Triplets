@@ -1,0 +1,73 @@
+//Color Values
+$color-bg:lightgrey;
+$color-small:yellow;
+$color-medium:blue;
+$color-large:red;
+$color-x-large:orange;
+
+//MQ - Break points
+$break-small: 320px;
+$break-medium:768px;
+$break-large: 1200px;
+
+body,html{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: $color-bg;
+    padding: 0px;
+
+    @media (max-width: $break-small){
+        width: 100%;
+    }
+
+    @media (max-width: $break-medium){
+        width:100%;
+    }
+
+    @media (max-width: $break-large) and (min-width: $break-medium){
+        width: 90%;
+    }
+
+    @media (min-width: $break-large){
+        width: 80%
+    }
+}
+
+.col{
+    height: 10rem;
+
+    //Small
+    @media (max-width: $break-small){
+        background-color:$color-small;
+        width:100%;
+        display:block;
+    }
+    //Medium
+    @media (max-width: $break-medium) and (min-width: $break-small){
+        background-color: $color-medium;
+        width: 100%;
+        display:block;
+    }
+    //Large
+    @media (max-width: $break-large) and (min-width: $break-medium){
+        background-color: $color-large;
+        width: calc(100%  /3);
+        float:left;
+    }
+    //X-Large
+    @media (min-width: $break-large){
+        background-color: $color-x-large;
+        width: calc(100%  /3);
+        float:left;
+    }
+
+    &:hover{
+        opacity: .95%;
+    }
+}
