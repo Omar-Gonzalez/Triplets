@@ -1,0 +1,25 @@
+.sidebar{
+
+    @if $debug {
+        outline:1px solid $color-grid-sidebar;
+    }
+
+    position:fixed;
+    height: 100%;
+
+    @media (max-width: $break-small){
+        width: 2em;
+    }
+    //Medium
+    @media (max-width: $break-medium){
+        width:3em;
+    }
+    //Large
+    @media (max-width: $break-large) and (min-width: $break-medium){
+        width:6em;
+    }
+    //X-Large
+    @media (min-width: $break-large){
+        width:8em;
+    }
+}

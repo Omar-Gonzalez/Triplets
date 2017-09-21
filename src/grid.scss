@@ -1,0 +1,144 @@
+//MQ - Break points
+$break-small: 320px;
+$break-medium: 768px;
+$break-large: 1200px;
+$break-x-large: 1800px;
+
+body,html{
+    margin: 0px;
+    padding: 0px;
+}
+
+@mixin container-width-l-definition($container){
+    @if $container == "" {
+        width: 90%;
+    }
+
+    @if $container == "-full" {
+        width: 100%;
+    }
+
+    @if $container == "-sb-left"{
+        max-width: 100%;
+    }
+}
+
+@mixin container-width-xl-definition($container){
+    @if $container == "" {
+        width: 80%;
+    }
+
+    @if $container == "-full" {
+        width: 100%;
+    }
+
+    @if $container == "-sb-left"{
+        max-width: 100%;
+    }
+}
+
+@mixin container-width-xxl-definition($container){
+    @if $container == "" {
+        width: 70%;
+    }
+
+    @if $container == "-full" {
+        width: 100%;
+    }
+
+    @if $container == "-sb-left"{
+        max-width: 100%;
+    }
+}
+
+@mixin sidebar-left-margin-definition(){
+    @media (max-width: $break-small){
+        margin-left:2em;
+    }
+    @media (max-width: $break-medium){
+        margin-left:3em;
+    }
+    @media (max-width: $break-large) and (min-width: $break-medium){
+        margin-left:6em;
+    }
+    @media (min-width: $break-large){
+        margin-left:8em;
+    }
+}
+
+$container-kind:"","-full","-sb-left";
+
+@each $container in $container-kind{
+    .container#{$container}{
+        @if $debug {
+            outline:1px solid $color-grid-container;
+        }
+        @if $container == "-sb-left"{
+            @include sidebar-left-margin-definition()
+        }@else{
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        //Small
+        @media (max-width: $break-small){
+            width: 100%;
+        }
+        //Medium
+        @media (max-width: $break-medium){
+            width:100%;
+        }
+        //Large
+        @media (max-width: $break-large) and (min-width: $break-medium){
+            @include container-width-l-definition(#{$container})
+        }
+        //X-Large
+        @media (min-width: $break-large) and (max-width: $break-x-large){
+            @include container-width-xl-definition(#{$container})
+        }
+        //XX-Large
+        @media (min-width: $break-x-large){
+            @include container-width-xxl-definition(#{$container})
+        }
+    }
+}
+
+@mixin col-size($cols){
+    width: calc(100%  / #{$cols});
+}
+
+
+@for $qty from 1 through 12 {
+    .col-#{$qty}{
+        @if $debug {
+            min-height: 10rem;
+            outline:1px solid $color-grid-col;
+        }
+
+        //Small
+        @media (max-width: $break-small){
+            width:100%;
+            display:block;
+        }
+        //Medium
+        @media (max-width: $break-medium) and (min-width: $break-small){
+            width: 100%;
+            display:block;
+        }
+        //Large
+        @media (max-width: $break-large) and (min-width: $break-medium){
+            float:left;
+            @include col-size(#{$qty});
+        }
+        //X-Large
+        @media (min-width: $break-large) and (max-width: $break-x-large){
+            float:left;
+            @include col-size(#{$qty});
+        }
+        //XX-Large
+        @media (min-width: $break-x-large){
+            float:left;
+            @include col-size(#{$qty});
+        }
+    }
+}
