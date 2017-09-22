@@ -1,19 +1,70 @@
-.sidebar {
-    @if $debug {
-        outline: 1px solid $color-grid-sidebar;
-    }
-    position: fixed;
-    height: 100%;
+$sidebar-kind:"-left","-right";
+
+@mixin sidebar-position-definition(){
     @media (max-width: $break-small) {
-        width: 2em;
+        right: 0px;
     }
     @media (max-width: $break-medium) {
-        width: 3em;
+        right: 0px;
     }
     @media (max-width: $break-large) and (min-width: $break-medium) {
-        width: 6em;
+        right: 5%;
     }
-    @media (min-width: $break-large) {
+    @media (min-width: $break-large) and (max-width: $break-x-large){
+        right: 10%;
+    }
+    @media (min-width: $break-x-large){
+        right: 15%;
+    }
+}
+
+@mixin mobile-toggle-shadow-definition($sb){
+    @if $sb == "-right"{
+        box-shadow: $right-shadow;
+    }
+    @if $sb == "-left"{
+        box-shadow: $left-shadow;
+    }
+}
+
+@mixin mobile-toggle-definition($sb){
+    @media (max-width: $break-small) {
         width: 8em;
+        @include mobile-toggle-shadow-definition(#{$sb})
+    }
+    @media (max-width: $break-medium) {
+        width: 8em;
+        @include mobile-toggle-shadow-definition(#{$sb})
+    }
+}
+
+@each $sb in $sidebar-kind {
+    .sidebar#{$sb} {
+        @if $debug {
+            outline: 1px solid $color-grid-sidebar;
+        }
+        @if $theme{
+            background-color: $color-theme-blue;
+        }
+        @if $sb == "-right" {
+            @include sidebar-position-definition()
+        }
+        position: fixed;
+        height: 100%;
+        @media (max-width: $break-small) {
+            width: 2em;
+        }
+        @media (max-width: $break-medium) {
+            width: 3em;
+        }
+        @media (max-width: $break-large) and (min-width: $break-medium) {
+            width: 6em;
+        }
+        @media (min-width: $break-large) {
+            width: 8em;
+        }
+        &:hover {
+            @include mobile-toggle-definition($sb)
+        }
     }
 }

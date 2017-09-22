@@ -3,6 +3,10 @@ body, html {
   padding: 0px;
 }
 
+body {
+  background-color: #F2F6F8;
+}
+
 .container {
   outline: 1px solid #E91E63;
   margin-right: auto;
@@ -24,18 +28,21 @@ body, html {
 @media (max-width: 1200px) and (min-width: 768px) {
   .container {
     width: 90%;
+    max-width: 100%;
   }
 }
 
 @media (min-width: 1200px) and (max-width: 1800px) {
   .container {
     width: 80%;
+    max-width: 100%;
   }
 }
 
 @media (min-width: 1800px) {
   .container {
     width: 70%;
+    max-width: 100%;
   }
 }
 
@@ -60,18 +67,21 @@ body, html {
 @media (max-width: 1200px) and (min-width: 768px) {
   .container-full {
     width: 100%;
+    max-width: 100%;
   }
 }
 
 @media (min-width: 1200px) and (max-width: 1800px) {
   .container-full {
     width: 100%;
+    max-width: 100%;
   }
 }
 
 @media (min-width: 1800px) {
   .container-full {
     width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -135,8 +145,32 @@ body, html {
 
 .container-sb-right {
   outline: 1px solid #E91E63;
-  margin-right: auto;
-  margin-left: auto;
+}
+
+@media (max-width: 320px) {
+  .container-sb-right {
+    margin-right-right: 2em;
+    float: right;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-sb-right {
+    margin-right: 3em;
+    float: right;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+  .container-sb-right {
+    margin-right: 6em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-sb-right {
+    margin-right: 8em;
+  }
 }
 
 @media (max-width: 320px) {
@@ -151,9 +185,28 @@ body, html {
   }
 }
 
+@media (max-width: 1200px) and (min-width: 768px) {
+  .container-sb-right {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1800px) {
+  .container-sb-right {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1800px) {
+  .container-sb-right {
+    max-width: 100%;
+  }
+}
+
 .col-1 {
   min-height: 10rem;
   outline: 1px solid #03A9F4;
+  background-color: white;
 }
 
 @media (max-width: 320px) {
@@ -194,6 +247,7 @@ body, html {
 .col-2 {
   min-height: 10rem;
   outline: 1px solid #03A9F4;
+  background-color: white;
 }
 
 @media (max-width: 320px) {
@@ -234,6 +288,7 @@ body, html {
 .col-3 {
   min-height: 10rem;
   outline: 1px solid #03A9F4;
+  background-color: white;
 }
 
 @media (max-width: 320px) {
@@ -274,6 +329,7 @@ body, html {
 .col-4 {
   min-height: 10rem;
   outline: 1px solid #03A9F4;
+  background-color: white;
 }
 
 @media (max-width: 320px) {
@@ -314,6 +370,7 @@ body, html {
 .col-5 {
   min-height: 10rem;
   outline: 1px solid #03A9F4;
+  background-color: white;
 }
 
 @media (max-width: 320px) {
@@ -354,6 +411,7 @@ body, html {
 .col-6 {
   min-height: 10rem;
   outline: 1px solid #03A9F4;
+  background-color: white;
 }
 
 @media (max-width: 320px) {
@@ -394,6 +452,7 @@ body, html {
 .col-7 {
   min-height: 10rem;
   outline: 1px solid #03A9F4;
+  background-color: white;
 }
 
 @media (max-width: 320px) {
@@ -434,6 +493,7 @@ body, html {
 .col-8 {
   min-height: 10rem;
   outline: 1px solid #03A9F4;
+  background-color: white;
 }
 
 @media (max-width: 320px) {
@@ -474,6 +534,7 @@ body, html {
 .col-9 {
   min-height: 10rem;
   outline: 1px solid #03A9F4;
+  background-color: white;
 }
 
 @media (max-width: 320px) {
@@ -514,6 +575,7 @@ body, html {
 .col-10 {
   min-height: 10rem;
   outline: 1px solid #03A9F4;
+  background-color: white;
 }
 
 @media (max-width: 320px) {
@@ -554,6 +616,7 @@ body, html {
 .col-11 {
   min-height: 10rem;
   outline: 1px solid #03A9F4;
+  background-color: white;
 }
 
 @media (max-width: 320px) {
@@ -594,6 +657,7 @@ body, html {
 .col-12 {
   min-height: 10rem;
   outline: 1px solid #03A9F4;
+  background-color: white;
 }
 
 @media (max-width: 320px) {
@@ -631,33 +695,127 @@ body, html {
   }
 }
 
-.sidebar {
+.sidebar-left {
   outline: 1px solid #673AB7;
+  background-color: #0B3F9C;
   position: fixed;
   height: 100%;
 }
 
 @media (max-width: 320px) {
-  .sidebar {
+  .sidebar-left {
     width: 2em;
   }
 }
 
 @media (max-width: 768px) {
-  .sidebar {
+  .sidebar-left {
     width: 3em;
   }
 }
 
 @media (max-width: 1200px) and (min-width: 768px) {
-  .sidebar {
+  .sidebar-left {
     width: 6em;
   }
 }
 
 @media (min-width: 1200px) {
-  .sidebar {
+  .sidebar-left {
     width: 8em;
+  }
+}
+
+@media (max-width: 320px) {
+  .sidebar-left:hover {
+    width: 8em;
+    -webkit-box-shadow: 1px 1px 2px 0px #5c5c5c;
+    box-shadow: 1px 1px 2px 0px #5c5c5c;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar-left:hover {
+    width: 8em;
+    -webkit-box-shadow: 1px 1px 2px 0px #5c5c5c;
+    box-shadow: 1px 1px 2px 0px #5c5c5c;
+  }
+}
+
+.sidebar-right {
+  outline: 1px solid #673AB7;
+  background-color: #0B3F9C;
+  position: fixed;
+  height: 100%;
+}
+
+@media (max-width: 320px) {
+  .sidebar-right {
+    right: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar-right {
+    right: 0px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+  .sidebar-right {
+    right: 5%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1800px) {
+  .sidebar-right {
+    right: 10%;
+  }
+}
+
+@media (min-width: 1800px) {
+  .sidebar-right {
+    right: 15%;
+  }
+}
+
+@media (max-width: 320px) {
+  .sidebar-right {
+    width: 2em;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar-right {
+    width: 3em;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+  .sidebar-right {
+    width: 6em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sidebar-right {
+    width: 8em;
+  }
+}
+
+@media (max-width: 320px) {
+  .sidebar-right:hover {
+    width: 8em;
+    -webkit-box-shadow: -1px 1px 2px 0px #5c5c5c;
+    box-shadow: -1px 1px 2px 0px #5c5c5c;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar-right:hover {
+    width: 8em;
+    -webkit-box-shadow: -1px 1px 2px 0px #5c5c5c;
+    box-shadow: -1px 1px 2px 0px #5c5c5c;
   }
 }
 

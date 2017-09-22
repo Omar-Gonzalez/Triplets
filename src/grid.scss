@@ -9,6 +9,12 @@ body,html{
     padding: 0px;
 }
 
+body{
+    @if $theme {
+        background-color: $color-theme-lightgrey;
+    }
+}
+
 @mixin container-width-sml-definition($container){
     @if $container == "" {
         width: 90%;
@@ -16,7 +22,7 @@ body,html{
     @if $container == "-full" {
         width: 100%;
     }
-    @if $container == "-sb-left"{
+    @if $container == "-sb-left" or $container "sb-right"{
         max-width: 100%;
     }
 }
@@ -28,7 +34,7 @@ body,html{
     @if $container == "-full" {
         width: 100%;
     }
-    @if $container == "-sb-left"{
+    @if $container == "-sb-left" or $container "sb-right"{
         max-width: 100%;
     }
 }
@@ -40,23 +46,41 @@ body,html{
     @if $container == "-full" {
         width: 100%;
     }
-    @if $container == "-sb-left"{
+    @if $container == "-sb-left" or $container "sb-right"{
         max-width: 100%;
     }
 }
 
-@mixin sidebar-left-margin-definition(){
+@mixin sidebar-margin-definition($position){
     @media (max-width: $break-small){
-        margin-left:2em;
+        @if $position == "-sb-left"{
+            margin-left:2em;
+        }@else{
+            margin-right-right: 2em;
+            float: right;
+        }
     }
     @media (max-width: $break-medium){
-        margin-left:3em;
+        @if $position == "-sb-left"{
+            margin-left:3em;
+        }@else{
+            margin-right:3em;
+            float: right;
+        }
     }
     @media (max-width: $break-large) and (min-width: $break-medium){
-        margin-left:6em;
+        @if $position == "-sb-left"{
+            margin-left:6em;
+        }@else{
+            margin-right:6em;
+        }
     }
     @media (min-width: $break-large){
-        margin-left:8em;
+        @if $position == "-sb-left"{
+            margin-left:8em;
+        }@else{
+            margin-right:8em;
+        }
     }
 }
 
@@ -67,29 +91,24 @@ $container-kind:"","-full","-sb-left","-sb-right";
         @if $debug {
             outline:1px solid $color-grid-container;
         }
-        @if $container == "-sb-left"{
-            @include sidebar-left-margin-definition()
+        @if $container == "-sb-left" or $container == "-sb-right" {
+            @include sidebar-margin-definition(#{$container})
         }@else{
             margin-right: auto;
             margin-left: auto;
         }
-        //Small
         @media (max-width: $break-small){
             width: 100%;
         }
-        //Medium
         @media (max-width: $break-medium){
             width:100%;
         }
-        //Large
         @media (max-width: $break-large) and (min-width: $break-medium){
             @include container-width-sml-definition(#{$container})
         }
-        //X-Large
         @media (min-width: $break-large) and (max-width: $break-x-large){
             @include container-width-xl-definition(#{$container})
         }
-        //XX-Large
         @media (min-width: $break-x-large){
             @include container-width-xxl-definition(#{$container})
         }
@@ -107,27 +126,25 @@ $container-kind:"","-full","-sb-left","-sb-right";
             min-height: 10rem;
             outline:1px solid $color-grid-col;
         }
-        //Small
+        @if $theme {
+            background-color: white;
+        }
         @media (max-width: $break-small){
             width:100%;
             display:block;
         }
-        //Medium
         @media (max-width: $break-medium) and (min-width: $break-small){
             width: 100%;
             display:block;
         }
-        //Large
         @media (max-width: $break-large) and (min-width: $break-medium){
             float:left;
             @include col-size(#{$qty});
         }
-        //X-Large
         @media (min-width: $break-large) and (max-width: $break-x-large){
             float:left;
             @include col-size(#{$qty});
         }
-        //XX-Large
         @media (min-width: $break-x-large){
             float:left;
             @include col-size(#{$qty});
