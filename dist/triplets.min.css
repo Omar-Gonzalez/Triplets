@@ -133,6 +133,24 @@ body, html {
   }
 }
 
+.container-sb-right {
+  outline: 1px solid #E91E63;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: 320px) {
+  .container-sb-right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-sb-right {
+    width: 100%;
+  }
+}
+
 .col-1 {
   min-height: 10rem;
   outline: 1px solid #03A9F4;

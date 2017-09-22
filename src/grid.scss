@@ -9,15 +9,13 @@ body,html{
     padding: 0px;
 }
 
-@mixin container-width-l-definition($container){
+@mixin container-width-sml-definition($container){
     @if $container == "" {
         width: 90%;
     }
-
     @if $container == "-full" {
         width: 100%;
     }
-
     @if $container == "-sb-left"{
         max-width: 100%;
     }
@@ -27,11 +25,9 @@ body,html{
     @if $container == "" {
         width: 80%;
     }
-
     @if $container == "-full" {
         width: 100%;
     }
-
     @if $container == "-sb-left"{
         max-width: 100%;
     }
@@ -41,11 +37,9 @@ body,html{
     @if $container == "" {
         width: 70%;
     }
-
     @if $container == "-full" {
         width: 100%;
     }
-
     @if $container == "-sb-left"{
         max-width: 100%;
     }
@@ -66,7 +60,7 @@ body,html{
     }
 }
 
-$container-kind:"","-full","-sb-left";
+$container-kind:"","-full","-sb-left","-sb-right";
 
 @each $container in $container-kind{
     .container#{$container}{
@@ -79,7 +73,6 @@ $container-kind:"","-full","-sb-left";
             margin-right: auto;
             margin-left: auto;
         }
-
         //Small
         @media (max-width: $break-small){
             width: 100%;
@@ -90,7 +83,7 @@ $container-kind:"","-full","-sb-left";
         }
         //Large
         @media (max-width: $break-large) and (min-width: $break-medium){
-            @include container-width-l-definition(#{$container})
+            @include container-width-sml-definition(#{$container})
         }
         //X-Large
         @media (min-width: $break-large) and (max-width: $break-x-large){
@@ -103,10 +96,10 @@ $container-kind:"","-full","-sb-left";
     }
 }
 
+
 @mixin col-size($cols){
     width: calc(100%  / #{$cols});
 }
-
 
 @for $qty from 1 through 12 {
     .col-#{$qty}{
@@ -114,7 +107,6 @@ $container-kind:"","-full","-sb-left";
             min-height: 10rem;
             outline:1px solid $color-grid-col;
         }
-
         //Small
         @media (max-width: $break-small){
             width:100%;
