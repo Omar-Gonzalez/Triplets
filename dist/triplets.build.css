@@ -15,6 +15,8 @@ body {
 }
 
 .container {
+  background-color: white;
+  outline: 1px solid #E91E63;
   margin-right: auto;
   margin-left: auto;
 }
@@ -53,6 +55,8 @@ body {
 }
 
 .container-full {
+  background-color: white;
+  outline: 1px solid #E91E63;
   margin-right: auto;
   margin-left: auto;
 }
@@ -88,6 +92,11 @@ body {
     width: 100%;
     max-width: 100%;
   }
+}
+
+.container-sb-left {
+  background-color: white;
+  outline: 1px solid #E91E63;
 }
 
 @media (max-width: 320px) {
@@ -142,6 +151,11 @@ body {
   .container-sb-left {
     max-width: 100%;
   }
+}
+
+.container-sb-right {
+  background-color: white;
+  outline: 1px solid #E91E63;
 }
 
 @media (max-width: 320px) {
@@ -201,6 +215,8 @@ body {
 }
 
 .col-1 {
+  min-height: 10rem;
+  outline: 1px solid #03A9F4;
   background-color: white;
 }
 
@@ -240,6 +256,8 @@ body {
 }
 
 .col-2 {
+  min-height: 10rem;
+  outline: 1px solid #03A9F4;
   background-color: white;
 }
 
@@ -279,6 +297,8 @@ body {
 }
 
 .col-3 {
+  min-height: 10rem;
+  outline: 1px solid #03A9F4;
   background-color: white;
 }
 
@@ -318,6 +338,8 @@ body {
 }
 
 .col-4 {
+  min-height: 10rem;
+  outline: 1px solid #03A9F4;
   background-color: white;
 }
 
@@ -357,6 +379,8 @@ body {
 }
 
 .col-5 {
+  min-height: 10rem;
+  outline: 1px solid #03A9F4;
   background-color: white;
 }
 
@@ -396,6 +420,8 @@ body {
 }
 
 .col-6 {
+  min-height: 10rem;
+  outline: 1px solid #03A9F4;
   background-color: white;
 }
 
@@ -435,6 +461,8 @@ body {
 }
 
 .col-7 {
+  min-height: 10rem;
+  outline: 1px solid #03A9F4;
   background-color: white;
 }
 
@@ -474,6 +502,8 @@ body {
 }
 
 .col-8 {
+  min-height: 10rem;
+  outline: 1px solid #03A9F4;
   background-color: white;
 }
 
@@ -513,6 +543,8 @@ body {
 }
 
 .col-9 {
+  min-height: 10rem;
+  outline: 1px solid #03A9F4;
   background-color: white;
 }
 
@@ -552,6 +584,8 @@ body {
 }
 
 .col-10 {
+  min-height: 10rem;
+  outline: 1px solid #03A9F4;
   background-color: white;
 }
 
@@ -591,6 +625,8 @@ body {
 }
 
 .col-11 {
+  min-height: 10rem;
+  outline: 1px solid #03A9F4;
   background-color: white;
 }
 
@@ -630,6 +666,8 @@ body {
 }
 
 .col-12 {
+  min-height: 10rem;
+  outline: 1px solid #03A9F4;
   background-color: white;
 }
 
@@ -669,6 +707,7 @@ body {
 }
 
 .sidebar-left {
+  outline: 1px solid #673AB7;
   background-color: #303F9F;
   position: fixed;
   height: 100%;
@@ -753,6 +792,7 @@ body {
 }
 
 .sidebar-right {
+  outline: 1px solid #673AB7;
   background-color: #303F9F;
   position: fixed;
   height: 100%;
@@ -873,6 +913,7 @@ body {
   -webkit-transition: width 0.35s;
   transition: width 0.35s;
   word-wrap: break-word;
+  outline: 1px solid lightgrey;
 }
 
 @media (max-width: 320px) {

@@ -82,6 +82,9 @@ $container-kind:"","-full","-sb-left","-sb-right";
 
 @each $container in $container-kind{
     .container#{$container}{
+        @if $theme{
+            background-color: white;
+        }
         @if $debug {
             outline:1px solid $color-grid-container;
         }
