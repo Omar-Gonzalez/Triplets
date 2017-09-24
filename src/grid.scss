@@ -1,9 +1,3 @@
-//MQ - Break points
-$break-small: 320px;
-$break-medium: 768px;
-$break-large: 1200px;
-$break-x-large: 1800px;
-
 body,html{
     margin: 0px;
     padding: 0px;
@@ -54,32 +48,32 @@ body{
 @mixin sidebar-margin-definition($position){
     @media (max-width: $break-small){
         @if $position == "-sb-left"{
-            margin-left:2em;
+            margin-left:$sidebar-width-small;
         }@else{
-            margin-right-right: 2em;
+            margin-right-right:$sidebar-width-small;
             float: right;
         }
     }
     @media (max-width: $break-medium){
         @if $position == "-sb-left"{
-            margin-left:3em;
+            margin-left:$sidebar-width-medium;
         }@else{
-            margin-right:3em;
+            margin-right:$sidebar-width-medium;
             float: right;
         }
     }
     @media (max-width: $break-large) and (min-width: $break-medium){
         @if $position == "-sb-left"{
-            margin-left:6em;
+            margin-left:$sidebar-width-large;
         }@else{
-            margin-right:6em;
+            margin-right:$sidebar-width-large;
         }
     }
     @media (min-width: $break-large){
         @if $position == "-sb-left"{
-            margin-left:8em;
+            margin-left:$sidebar-width-x-large;
         }@else{
-            margin-right:8em;
+            margin-right:$sidebar-width-x-large;
         }
     }
 }

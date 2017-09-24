@@ -1,2 +1,20 @@
-$debug:true;
+$debug:false;
 $theme:true;
+
+//Grid Break Points
+$break-small: 320px;
+$break-medium: 768px;
+$break-large: 1200px;
+$break-x-large: 1800px;
+
+//Sidebar Width 
+$sidebar-width-small:2em;
+$sidebar-width-medium:3em;
+$sidebar-width-large:6em;
+$sidebar-width-x-large:8em;
+
+//Toggle Width 
+$sidebar-toggle-width:12em;
+
+//Transition time
+$transition-time:0.35s; //iOS Standard
