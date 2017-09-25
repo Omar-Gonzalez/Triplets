@@ -740,24 +740,24 @@ body {
 }
 
 @media (max-width: 320px) {
-  .sidebar-left:hover, .sidebar-left:active {
+  .sidebar-left:hover, .sidebar-left:active, .sidebar-left:focus {
     width: 12em;
     box-shadow: 1px 1px 2px 0px #5c5c5c;
   }
 }
 
 @media (max-width: 768px) {
-  .sidebar-left:hover, .sidebar-left:active {
+  .sidebar-left:hover, .sidebar-left:active, .sidebar-left:focus {
     width: 12em;
     box-shadow: 1px 1px 2px 0px #5c5c5c;
   }
 }
 
-.sidebar-left:hover .sb-tile, .sidebar-left:active .sb-tile {
+.sidebar-left:hover .sb-tile, .sidebar-left:active .sb-tile, .sidebar-left:focus .sb-tile {
   display: block;
 }
 
-.sidebar-left:hover i, .sidebar-left:active i {
+.sidebar-left:hover i, .sidebar-left:active i, .sidebar-left:focus i {
   display: none;
 }
 
@@ -855,24 +855,24 @@ body {
 }
 
 @media (max-width: 320px) {
-  .sidebar-right:hover, .sidebar-right:active {
+  .sidebar-right:hover, .sidebar-right:active, .sidebar-right:focus {
     width: 12em;
     box-shadow: -1px 1px 2px 0px #5c5c5c;
   }
 }
 
 @media (max-width: 768px) {
-  .sidebar-right:hover, .sidebar-right:active {
+  .sidebar-right:hover, .sidebar-right:active, .sidebar-right:focus {
     width: 12em;
     box-shadow: -1px 1px 2px 0px #5c5c5c;
   }
 }
 
-.sidebar-right:hover .sb-tile, .sidebar-right:active .sb-tile {
+.sidebar-right:hover .sb-tile, .sidebar-right:active .sb-tile, .sidebar-right:focus .sb-tile {
   display: block;
 }
 
-.sidebar-right:hover i, .sidebar-right:active i {
+.sidebar-right:hover i, .sidebar-right:active i, .sidebar-right:focus i {
   display: none;
 }
 
@@ -910,8 +910,6 @@ body {
   margin-right: auto;
   margin-left: auto;
   margin-top: 1em;
-  -webkit-transition: width 0.35s;
-  transition: width 0.35s;
   word-wrap: break-word;
   outline: 1px solid lightgrey;
 }
@@ -952,11 +950,11 @@ body {
   font-weight: lighter;
 }
 
-.sb-tile a:hover, .sb-tile a:active {
+.sb-tile a:hover, .sb-tile a:active, .sb-tile a:focus {
   color: #D1C4E9;
 }
 
-.sb-tile a:hover, .sb-tile a:active {
+.sb-tile a:hover, .sb-tile a:active, .sb-tile a:focus {
   cursor: pointer;
 }
 

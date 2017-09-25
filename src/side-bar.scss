@@ -66,7 +66,7 @@ $sidebar-kind:"-left","-right";
         @media (min-width: $break-large) {
             width: $sidebar-width-x-large;
         }
-        &:hover, &:active {
+        &:hover, &:active, &:focus {
             @include mobile-toggle-definition($sb)
             .sb-tile{
                 display: block;
@@ -134,11 +134,11 @@ $sidebar-kind:"-left","-right";
             font-family: $font-source-pro;
             font-size: .8em;
             font-weight: lighter;
-            &:hover, &:active{
+            &:hover, &:active, &:focus {
                 color:$color-theme-a-hover;
             }
         }
-        &:hover, &:active{
+        &:hover, &:active, &:focus {
             cursor:pointer;
         }
     }
